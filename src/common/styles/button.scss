@@ -1,13 +1,14 @@
 .btn {
-  padding: 12px 35px;
+  padding: 8px 35px;
   font: normal normal normal 16px/1.4rem, "Quicksand", sans-serif;
   margin: 0 auto;
+  color: #fff;
   border: 1px solid #fff;
   background-color: transparent;
   transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
 
   &:hover {
-    border: transparent;
+    border-color: rgba(39, 58, 78, 1);
     background-color: rgba(39, 58, 78, 1);
   }
 }
