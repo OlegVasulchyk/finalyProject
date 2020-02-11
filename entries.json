@@ -1,0 +1,11 @@
+{
+  "index": [
+    "./src/index/index.js"
+  ],
+  "home": [
+    "./src/home/home.js"
+  ],
+  "portfolio": [
+    "./src/portfolio/portfolio.js"
+  ]
+}
