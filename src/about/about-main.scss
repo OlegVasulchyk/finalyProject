@@ -1,0 +1,73 @@
+.about {
+  margin-top: 155px;
+  height: 884px;
+  width: 100%;
+
+  @media only screen and (max-width: 767px) {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  &__image {
+    height: 100%;
+    background-color: rgb(39, 58, 78);
+    background: url(./image/photograph.webp) center / cover, no-repeat;
+
+    @media only screen and (max-width: 767px) {
+      height: 600px;
+      background: url(./image/photograph-mobile.webp) top / cover, no-repeat;
+    }
+
+    @media only screen and (max-width: 575px) {
+      height: 300px;
+    }
+  }
+
+  &__description-block {
+    padding: 156px 135px;
+    background-color: rgb(239, 242, 245);
+    color: rgb(47, 49, 49);
+    height: 100%;
+    overflow: hidden;
+
+    @media only screen and (max-width: 1199px) {
+      padding: 70px 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 65px 80px;
+    }
+
+    @media only screen and (max-width: 575px) {
+      padding: 50px 40px 30px 22px;
+    }
+  }
+  &__title {
+    font: normal normal normal 40px/1.4em "Cinzel", serif;
+    padding-bottom: 27px;
+    letter-spacing: 2px;
+
+    @include respond(tab-port) {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 35px;
+    }
+  }
+
+  &__title-secondary {
+    padding: 39px 0 13px;
+    font: normal normal normal 20px/1.4em "Quicksand", sans-serif;
+    text-transform: capitalize;
+
+    @include respond(tab-port) {
+      padding-top: 25px;
+    }
+  }
+  &__paragraph {
+    padding-bottom: 20px;
+    font: normal normal normal 16px/1.4em "Quicksand", sans-serif;
+  }
+}

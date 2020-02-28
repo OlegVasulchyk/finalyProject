@@ -1,4 +1,4 @@
-import "./about.scss";
+import "./books.scss";
 import { renderHeader } from "../common/scripts/render-header";
 import { renderNavigation } from "./render-navigation";
 import { renderMain } from "./render-main";
@@ -10,7 +10,6 @@ renderNavigation();
 renderMain();
 renderFooter();
 
-const body = document.querySelector("body");
 btn.addEventListener("click", () => {
   menu.classList.toggle("active");
   backdrop.classList.toggle("active");

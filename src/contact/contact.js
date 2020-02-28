@@ -1,4 +1,5 @@
-import "./about.scss";
+import "./contact.scss";
+
 import { renderHeader } from "../common/scripts/render-header";
 import { renderNavigation } from "./render-navigation";
 import { renderMain } from "./render-main";

@@ -1,0 +1,74 @@
+.contact {
+  margin-top: 155px;
+  @media only screen and (max-width: 767px) {
+    margin-top: 20px;
+  }
+  &__inner {
+    width: 67%;
+
+    @media only screen and (max-width: 1199px) {
+      width: 80%;
+    }
+    @media only screen and (max-width: 1199px) {
+      width: 100%;
+    }
+  }
+  &__image-block {
+    background-color: rgba(39, 58, 78, 1);
+    background: url(./image/bry.webp) center / cover, no-repeat;
+    align-self: stretch;
+
+    @media only screen and (max-width: 574px) {
+      height: 50vh;
+    }
+  }
+  &__form-block {
+    padding: 156px 40px 156px 140px;
+    background-color: rgb(239, 242, 245);
+    color: #303131;
+    font: normal normal normal 16px/1.4em "Quicksand", sans-serif;
+
+    @media only screen and (max-width: 1199px) {
+      padding: 130px 20px 130px 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 70px 25px 70px 30px;
+    }
+
+    @media only screen and (max-width: 574px) {
+      padding-top: 55px;
+    }
+  }
+
+  &__paragraph {
+    padding-bottom: 37px;
+
+    @include respond(phone) {
+      padding-bottom: 20px;
+    }
+  }
+  &__text {
+    padding-bottom: 37px;
+
+    @include respond(phone) {
+      padding-bottom: 20px;
+    }
+  }
+}
+.form-subscribe {
+  &__title {
+    font: normal normal normal 16px/1.4 "Quicksand", sans-serif;
+    padding-bottom: 8px;
+  }
+}
+.first-title {
+  font: normal normal normal 40px/1.4em "Cinzel", serif;
+  padding-bottom: 37px;
+  letter-spacing: 2px;
+
+  @include respond(phone) {
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+}

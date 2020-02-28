@@ -1,14 +1,14 @@
 .navigation {
   width: 100%;
   height: 102px;
-  margin: 0 0 15px 0;
   background-color: #fff;
-
+  z-index: 999;
+  margin: 0 auto;
   position: fixed;
   top: 50px;
   left: 0;
   &__container {
-    height: 102px;
+    height: 100%;
     margin: 0 auto;
     width: 100%;
     max-width: 1520px;
@@ -16,29 +16,64 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  &__menu {
+    margin-top: 20px;
+  }
   &__link {
     margin-top: 41px;
     text-transform: uppercase;
     font: normal normal normal 26px/1.4em "Cinzel", serif;
     color: #303131;
+    letter-spacing: 4px;
   }
-  &__menu {
-    margin-top: 20px;
+  &__menu-toggle {
+    display: none;
+    transform-origin: top;
+    outline: none;
+  }
+
+  &__backdrop {
+    display: none;
+    outline: none;
+    transform-origin: center;
   }
 }
+
 .menu {
   display: flex;
   align-items: center;
   height: 70px;
+  transform-origin: right;
+  transition: all 0.7s ease;
 
   &__item {
     display: inline-block;
     padding: 0 50px;
+
+    @media only screen and (max-width: 991px) {
+      padding: 0 35px;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 25px;
+    }
     &:first-child {
       padding-left: 5px;
+      @media only screen and (max-width: 767px) {
+        padding-left: 0;
+      }
     }
     &:last-child {
       padding-right: 15px;
+
+      @media only screen and (max-width: 767px) {
+        padding-right: 0;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 20px 0;
     }
   }
   &__link {
@@ -48,11 +83,126 @@
     text-align: center;
     color: #303131;
     transition: color 0.4s ease 0s;
-    &:hover {
+    &:hover,
+    &:focus {
       color: #8b98a7;
     }
+
     &.active {
       color: #8b98a7;
+    }
+    @media only screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+}
+
+// Mobile Navigation menu
+
+@media (max-width: 767px) {
+  .navigation {
+    position: relative;
+    top: 0;
+    &__menu-toggle {
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      z-index: 1001;
+    }
+
+    &__icon {
+      position: relative;
+      margin-top: 25px;
+      transition: all 0.5s ease;
+      &,
+      &::before,
+      &::after {
+        width: 22px;
+        height: 2px;
+        background-color: #303131;
+        display: inline-block;
+        border-radius: 10rem;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::before {
+        top: -9px;
+      }
+      &::after {
+        top: 9px;
+      }
+
+      &.active {
+        & {
+          background-color: transparent;
+        }
+        &::before {
+          top: 0;
+          transform: rotate(-40deg);
+        }
+        &::after {
+          top: 0;
+          transform: rotate(40deg);
+        }
+        transition: all 0.2s ease;
+      }
+    }
+    &__backdrop {
+      position: fixed;
+      outline: none;
+      border: none;
+      top: 0;
+
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      width: 0;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      z-index: 999;
+      transition: all 0.2s ease 0.3s;
+      padding: 0;
+      &.active {
+        width: 100vw;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .menu {
+    visibility: hidden;
+    opacity: 0;
+    width: 80vw;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -80vw;
+    background-color: #fff;
+    margin-top: 0;
+    padding: 170px 40px 20px 40px;
+    overflow-y: hidden;
+    z-index: 1000;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      right: 0;
+      transition: all 0.7s ease;
     }
   }
 }

@@ -10,5 +10,11 @@
   ],
   "about": [
     "./src/about/about.js"
+  ],
+  "books": [
+    "./src/books/books.js"
+  ],
+  "contact": [
+    "./src/contact/contact.js"
   ]
 }

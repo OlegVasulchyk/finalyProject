@@ -1,14 +1,47 @@
 .btn {
+  display: inline-block;
   padding: 8px 35px;
-  font: normal normal normal 16px/1.4rem, "Quicksand", sans-serif;
-  margin: 0 auto;
+  font: normal normal normal 16px/1.4rem, "Cinzel", sans-serif;
   color: #fff;
   border: 1px solid #fff;
   background-color: transparent;
   transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
 
+  @include respond(phone) {
+    padding: 11px 30px;
+  }
+
   &:hover {
     border-color: rgba(39, 58, 78, 1);
     background-color: rgba(39, 58, 78, 1);
+  }
+  &--black {
+    border-color: rgba(48, 49, 49, 1);
+    color: rgba(48, 49, 49, 1);
+    transition: color 0.4s ease 0s, border-color 0.4s ease 0s,
+      background-color 0.4s ease 0s;
+
+    &:hover {
+      color: #fff;
+      border-color: rgba(39, 58, 78, 1);
+      background-color: rgba(39, 58, 78, 1);
+    }
+
+    @media only screen and (max-width: 574px) {
+      font-size: 16px;
+    }
+  }
+  &__form {
+    font-size: 16px;
+    border-color: rgba(39, 58, 78, 1);
+    background-color: rgba(39, 58, 78, 1);
+
+    &--small {
+      padding: 8px 12px;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
   }
 }
