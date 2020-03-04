@@ -1,14 +1,14 @@
 .main {
-  margin-top: 155px;
-
+  margin-top: $margin-top-big;
+  animation: FadeIN ease-in 0.3s;
   @media only screen and (max-width: 767px) {
-    margin-top: 20px;
+    margin-top: $margin-top-small;
   }
 }
 .first-title {
   padding: 30px 0 30px 0;
-  font: normal 45px/1.4em "Cinzel", serif;
-  color: #303131;
+  font: $block-title;
+  color: $color-grey-dark;
   letter-spacing: 3px;
   text-align: center;
 
@@ -48,7 +48,7 @@
   &__background {
     padding-top: 100px;
     height: 100%;
-    background-color: rgba(39, 58, 78, 1);
+    background-color: $color-primary;
 
     @media only screen and (max-width: 767px) {
       padding-top: 70px;
@@ -57,8 +57,8 @@
     &--1 {
       background: linear-gradient(
           to bottom,
-          rgba(39, 58, 78, 0.35),
-          rgba(39, 58, 78, 0.3)
+          rgba($color-primary, 0.35),
+          rgba($color-primary, 0.3)
         ),
         url(./image/mussels.webp) center / cover, no-repeat;
       @media only screen and (max-width: 767px) {
@@ -68,8 +68,8 @@
     &--2 {
       background: linear-gradient(
           to bottom,
-          rgba(39, 58, 78, 0.35),
-          rgba(39, 58, 78, 0.3)
+          rgba($color-primary, 0.35),
+          rgba($color-primary, 0.3)
         ),
         url(./image/pizza.webp) center / cover, no-repeat;
       @media only screen and (max-width: 767px) {
@@ -79,8 +79,8 @@
     &--3 {
       background: linear-gradient(
           to bottom,
-          rgba(39, 58, 78, 0.35),
-          rgba(39, 58, 78, 0.3)
+          rgba($color-primary, 0.35),
+          rgba($color-primary, 0.3)
         ),
         url(./image/bread.webp) center / cover, no-repeat;
 
@@ -90,8 +90,8 @@
     }
   }
   &__title {
-    font: normal normal normal 40px/1.4em "Cinzel", serif;
-    color: #fff;
+    font: $first-title;
+    color: $color-white;
     padding-bottom: 30px;
 
     @media only screen and (max-width: 991px) {

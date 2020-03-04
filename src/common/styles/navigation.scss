@@ -1,7 +1,7 @@
 .navigation {
   width: 100%;
   height: 102px;
-  background-color: #fff;
+  background-color: $color-white;
   z-index: 999;
   margin: 0 auto;
   position: fixed;
@@ -24,7 +24,7 @@
     margin-top: 41px;
     text-transform: uppercase;
     font: normal normal normal 26px/1.4em "Cinzel", serif;
-    color: #303131;
+    color: $color-grey-dark;
     letter-spacing: 4px;
   }
   &__menu-toggle {
@@ -78,18 +78,18 @@
   }
   &__link {
     width: 100%;
-    font: normal normal normal 16px/1.4em "Quicksand", sans-serif;
+    font: $paragraph-size;
     text-transform: capitalize;
     text-align: center;
-    color: #303131;
+    color: $color-grey-dark;
     transition: color 0.4s ease 0s;
     &:hover,
     &:focus {
-      color: #8b98a7;
+      color: $color-grey-light-1;
     }
 
     &.active {
-      color: #8b98a7;
+      color: $color-grey-light-1;
     }
     @media only screen and (max-width: 767px) {
       font-size: 18px;
@@ -123,7 +123,7 @@
       &::after {
         width: 22px;
         height: 2px;
-        background-color: #303131;
+        background-color: $color-grey-dark;
         display: inline-block;
         border-radius: 10rem;
       }
@@ -169,7 +169,7 @@
       visibility: hidden;
       width: 0;
       height: 100%;
-      background-color: rgba($color: #000000, $alpha: 0.4);
+      background-color: rgba($color-black, $alpha: 0.4);
       z-index: 999;
       transition: all 0.2s ease 0.3s;
       padding: 0;
@@ -192,7 +192,7 @@
     position: fixed;
     top: 0;
     right: -80vw;
-    background-color: #fff;
+    background-color: $color-white;
     margin-top: 0;
     padding: 170px 40px 20px 40px;
     overflow-y: hidden;
@@ -203,6 +203,36 @@
       visibility: visible;
       right: 0;
       transition: all 0.7s ease;
+    }
+  }
+}
+
+.arrowTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+  background-color: #bb97a8;
+  color: $color-white;
+  border-radius: 50%;
+  opacity: 0;
+  // visibility: hidden;
+
+  @media (max-width: 767px) {
+    &.activate {
+      opacity: 1;
+      animation: FadeIN ease-in 0.75s;
+    }
+
+    &.activate-of {
+      opacity: 0;
+      // visibility: hidden;
+      animation: FadeOf ease-in 0.75s;
     }
   }
 }

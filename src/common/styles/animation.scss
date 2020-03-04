@@ -1,11 +1,33 @@
 @keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(-10rem);
+    transform: translateY(-5rem);
   }
 
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@keyframes FadeIN {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes FadeOf {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

@@ -1,16 +1,17 @@
 .about {
-  margin-top: 155px;
+  margin-top: $margin-top-big;
   height: 884px;
   width: 100%;
+  animation: FadeIN ease-in 0.3s;
 
   @media only screen and (max-width: 767px) {
     height: auto;
-    margin-top: 20px;
+    margin-top: $margin-top-small;
   }
 
   &__image {
     height: 100%;
-    background-color: rgb(39, 58, 78);
+    background-color: $color-primary;
     background: url(./image/photograph.webp) center / cover, no-repeat;
 
     @media only screen and (max-width: 767px) {
@@ -25,8 +26,8 @@
 
   &__description-block {
     padding: 156px 135px;
-    background-color: rgb(239, 242, 245);
-    color: rgb(47, 49, 49);
+    background-color: $color-grey-light-2;
+    color: $color-grey-dark;
     height: 100%;
     overflow: hidden;
 
@@ -43,7 +44,7 @@
     }
   }
   &__title {
-    font: normal normal normal 40px/1.4em "Cinzel", serif;
+    font: $first-title;
     padding-bottom: 27px;
     letter-spacing: 2px;
 
@@ -59,7 +60,7 @@
 
   &__title-secondary {
     padding: 39px 0 13px;
-    font: normal normal normal 20px/1.4em "Quicksand", sans-serif;
+    font: $title-secondary;
     text-transform: capitalize;
 
     @include respond(tab-port) {
@@ -68,6 +69,6 @@
   }
   &__paragraph {
     padding-bottom: 20px;
-    font: normal normal normal 16px/1.4em "Quicksand", sans-serif;
+    font: $paragraph-size;
   }
 }

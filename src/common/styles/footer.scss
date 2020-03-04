@@ -1,8 +1,7 @@
 .main-footer {
   padding: 20px 0 20px;
-  font-family: "Quicksand", sans-serif;
-  color: #2a2a2a;
-  font-size: 16px;
+  font: $paragraph-size;
+  color: $color-grey-dark-2;
   text-align: center;
   @media (max-width: 768px) {
     padding: 10px;
@@ -10,7 +9,7 @@
 
   &__link {
     text-decoration: none;
-    color: #2a2a2a;
+    color: $color-grey-dark-2;
   }
 }
 
@@ -26,7 +25,7 @@
     }
   }
   &__link {
-    color: #20303c;
+    color: $color-primary-light;
     font-size: 18px;
   }
 }

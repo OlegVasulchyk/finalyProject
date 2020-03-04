@@ -3,6 +3,8 @@ const renderNavigation = () => {
   const header = document.body.children[0];
 
   const template = `<nav class="navigation">
+  <a href="#" id="top"></a>
+<a href="#top" class="arrowTop fas fa-chevron-up"></a>
   <div class="navigation__container">
     <a href="./home.html" class="navigation__link">j.alissa</a>
     <button id="btn" class="navigation__menu-toggle">
@@ -33,7 +35,6 @@ const renderNavigation = () => {
     tabindex="-1"
   ></button>
 </nav>`;
-
   header.insertAdjacentHTML("afterEnd", template);
 };
 

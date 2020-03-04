@@ -26,3 +26,15 @@ backdrop.addEventListener("click", () => {
 
 window.addEventListener("scroll", showVisible);
 showVisible();
+
+window.addEventListener("scroll", function() {
+  const arrowTop = document.querySelector(".arrowTop");
+  if (pageYOffset > 500) {
+    arrowTop.classList.remove("activate-of");
+    arrowTop.classList.add("activate");
+    this.setTimeout(() => {
+      arrowTop.classList.remove("activate");
+      arrowTop.classList.add("activate-of");
+    }, 7000);
+  }
+});

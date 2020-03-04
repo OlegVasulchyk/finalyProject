@@ -5,6 +5,7 @@ import { renderNavigation } from "./render-navigation";
 import { renderMain } from "./render-main";
 import { renderFooter } from "../common/scripts/render-footer";
 import { showVisible } from "../common/scripts/parallax";
+import { smoothScroll } from "../common/scripts/anchor";
 
 renderHeader();
 renderNavigation();
@@ -28,3 +29,14 @@ backdrop.addEventListener("click", () => {
 
 window.addEventListener("scroll", showVisible);
 showVisible();
+window.addEventListener("scroll", function() {
+  const arrowTop = document.querySelector(".arrowTop");
+  if (pageYOffset > 650) {
+    arrowTop.classList.remove("activate-of");
+    arrowTop.classList.add("activate");
+    this.setTimeout(() => {
+      arrowTop.classList.remove("activate");
+      arrowTop.classList.add("activate-of");
+    }, 7000);
+  }
+});
