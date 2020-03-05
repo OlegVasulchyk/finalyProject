@@ -223,10 +223,6 @@ function showVisible() {
     for (var _iterator = document.querySelectorAll(".parallax-mobile")[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var parallax = _step.value;
 
-      if (parallax.classList === ".parallax-mobile") {
-        continue;
-      }
-
       if (isVisible(parallax)) {
         parallax.classList.add("parallax-mobile--visible");
         parallax.classList.remove("parallax-mobile");
