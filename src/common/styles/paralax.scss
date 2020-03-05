@@ -3,7 +3,7 @@
     opacity: 0;
     visibility: hidden;
     &--visible {
-      animation: moveInTop 2s;
+      animation: moveInTop 2s ease-in 1s;
     }
   }
 }

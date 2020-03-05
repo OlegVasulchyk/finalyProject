@@ -13,10 +13,6 @@ function isVisible(elem) {
 
 function showVisible() {
   for (let parallax of document.querySelectorAll(".parallax-mobile")) {
-    if (parallax.classList === ".parallax-mobile") {
-      continue;
-    }
-
     if (isVisible(parallax)) {
       parallax.classList.add("parallax-mobile--visible");
       parallax.classList.remove("parallax-mobile");
