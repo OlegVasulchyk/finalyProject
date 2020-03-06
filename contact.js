@@ -246,6 +246,7 @@ window.addEventListener("scroll", function () {
     }, 7000);
   }
 });
+var form = document.querySelector(".form");
 
 /***/ }),
 
