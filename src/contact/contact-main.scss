@@ -1,6 +1,8 @@
 .contact {
   margin-top: $margin-top-big;
-  animation: FadeIN ease-in 0.5s;
+  @media only screen and (min-width: 767px) {
+    animation: FadeIN ease-in-out 1s;
+  }
   @media only screen and (max-width: 767px) {
     margin-top: $margin-top-small;
   }

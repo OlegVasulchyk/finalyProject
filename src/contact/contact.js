@@ -40,3 +40,9 @@ window.addEventListener("scroll", function() {
     }, 7000);
   }
 });
+
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+});

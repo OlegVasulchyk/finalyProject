@@ -2,7 +2,9 @@
   margin-top: $margin-top-big;
   height: 884px;
   width: 100%;
-  animation: FadeIN ease-in 0.5s;
+  @media only screen and (min-width: 767px) {
+    animation: FadeIN ease-in-out 1s;
+  }
 
   @media only screen and (max-width: 767px) {
     height: auto;

@@ -12,7 +12,10 @@
   padding-top: 325px;
   color: $color-white;
   text-align: center;
-  animation: FadeIN ease-in 0.3s;
+
+  @media only screen and (min-width: 767px) {
+    animation: FadeIN ease-in-out 1s;
+  }
 
   @media only screen and (max-width: 767px) {
     padding-top: 200px;
